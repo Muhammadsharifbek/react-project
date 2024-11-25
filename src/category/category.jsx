@@ -1,6 +1,8 @@
 import React from "react";
 import { Stack } from "@mui/material";
 import { category } from "../constans";
+import Videos from "../video/videos";
+
 // import { main } from "../main";
 import colors from "../constans/colors";
 
@@ -19,6 +21,7 @@ function Category({ selectedCategoryHandler, selectedCategory }) {
             }}
             onClick={() => selectedCategoryHandler(item.name)}
           >
+            <Videos />
             <span
               style={{
                 color:
