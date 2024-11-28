@@ -32,6 +32,7 @@ const options = {
 export const AppService = {
   async fetching(url) {
     const response = await axios.get(`${BASE_URL}/${url}`, options);
+    console.log(response.data);
     return response.data;
   },
 };
