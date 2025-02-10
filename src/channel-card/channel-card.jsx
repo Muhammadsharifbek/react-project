@@ -11,6 +11,7 @@ function ChannelCard({ video }) {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        textDecoration: "none",
         width: { xs: "356px", md: "320px" },
         height: "326px",
         margin: "auto",
@@ -23,13 +24,21 @@ function ChannelCard({ video }) {
           borderRadius: "50%",
           width: "190px",
           height: "190px",
+
           mb: "2px",
           border: "1px solid #e3e3e3",
         }}
       />
       <Typography variant={"h6"}>
         {video?.snippet.title}{" "}
-        <CheckCircle sx={{ fontSize: "14px", color: "gray", ml: "5px" }} />{" "}
+        <CheckCircle
+          sx={{
+            fontSize: "14px",
+            textDecoration: "none",
+            color: "gray",
+            ml: "5px",
+          }}
+        />{" "}
       </Typography>
       {video?.statistics?.SubscriberCount && (
         <Typography variant={"h6"}>

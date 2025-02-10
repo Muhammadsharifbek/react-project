@@ -17,20 +17,14 @@ function App() {
     <>
       <div>
         <Navbar />
-        <Router>
-          <Routes>
-            <Route path="/channel/:id" element={<Channel />} />
-            <Route path="/" element={<Main />} />
-            <Route path="/search/:id" element={Search} />
-            <Route path="/videoDetail/:id" element={videoDeail} />
-          </Routes>
-        </Router>
+
+        <Routes>
+          <Route path="/channel/:id" element={<Channel />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/search/:id" element={Search} />
+          <Route path="/videoDetail/:id" element={videoDeail} />
+        </Routes>
       </div>
-      {/* <Stack spacing={2} direction="row">
-        <Button variant="text">Text</Button>
-        <Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button>
-      </Stack> */}
     </>
   );
 }
