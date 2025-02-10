@@ -1,56 +1,3 @@
-// import React from "react";
-// import { Stack } from "@mui/material";
-// import { category } from "../constans";
-// import Videos from "../video/videos";
-
-// // import { main } from "../main";
-// import colors from "../constans/colors";
-
-// function Category({ selectedCategoryHandler, selectedCategory }) {
-//   return (
-//     <Stack direction={"row"} sx={{ overflowX: "scroll" }}>
-//       {category.map((item) => {
-//         return (
-//           <button
-//             key={item.name}
-//             className="category-btn"
-//             style={{
-//               borderRadius: "0",
-//               backgroundColor:
-//                 item.name === selectedCategory && colors.secondary,
-//             }}
-//             onClick={() => selectedCategoryHandler(item.name)}
-//           >
-//             <Videos />
-//             <span
-//               style={{
-//                 color:
-//                   item.name === selectedCategory ? "#fff" : colors.secondary,
-//                 marginRight: "23px",
-//               }}
-//               className={colors.secondary}
-//             >
-//               {item.icon}
-//             </span>
-//             <span
-//               style={{
-//                 color:
-//                   item.name === selectedCategory ? "#fff" : colors.secondary,
-//                 textDecoration: "none",
-//               }}
-//               className={colors.primary}
-//             >
-//               {item.name}
-//             </span>
-//           </button>
-//         );
-//       })}
-//     </Stack>
-//   );
-// }
-
-// export default Category;
-
 import React from "react";
 import { Stack } from "@mui/material";
 import { category } from "../constans";
@@ -73,11 +20,13 @@ function Category({ selectedCategoryHandler, selectedCategory }) {
           key={item.name}
           className="category-btn"
           style={{
+            display: "flex",
+            alignItems: "center",
             borderRadius: "0",
             backgroundColor:
               item.name === selectedCategory ? colors.secondary : "transparent",
-            padding: "10px 15px",
-            marginRight: "10px",
+            padding: "20px 15px",
+            marginRight: "14px",
             border: "none",
             textDecoration: "none",
             cursor: "pointer",
@@ -96,8 +45,11 @@ function Category({ selectedCategoryHandler, selectedCategory }) {
           </span>
           <span
             style={{
-              color: item.name === selectedCategory ? "#fff" : colors.primary,
+              color:
+                item.name === selectedCategory ? "crimson" : colors.primary,
               textDecoration: "none",
+              paddingTop: "3px",
+              lineHeight: "1",
             }}
           >
             {item.name}
